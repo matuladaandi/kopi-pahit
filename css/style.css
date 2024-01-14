@@ -13,13 +13,12 @@
     text-decoration: none;
 }
 
-/* desktop style */
-
+/* body desktop style */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg);
     color: #fff;
-    min-height: 2000px;
+    min-height: 5000px;
 }
 
 /* Navbar */
@@ -148,13 +147,15 @@ body {
     box-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5);
 }
 
-/* about section & menu(a little)*/
+/* about section & menu,contact(a little)*/
 .about,
+contact,
 .menu {
     padding: 8rem 7% 1.4rem;
 }
 
 .about h2,
+.contact h2,
 .menu h2 {
     text-align: center;
     font-size: 2.6rem;
@@ -162,6 +163,7 @@ body {
 }
 
 .about h2 span,
+.contact h2 span,
 .menu h2 span {
     color: var(--primary);
 }
@@ -197,11 +199,13 @@ body {
 
 /* Menu section */
 
-.menu h2 {
+.menu h2,
+.contact h2 {
     margin-bottom: 1rem;
 }
 
-.menu p {
+.menu p,
+.contact p {
     max-width: 30rem;
     margin: auto;
     text-align: center;
@@ -224,12 +228,59 @@ body {
 
 .menu .row .menu-card img {
     border-radius: 50%;
-    width: 80%;
+    width: 50%;
 }
 
 .menu .row .menu-card .menu-card-title {
     margin: 1rem auto 0.5rem;
 }
+
+/* contact section */
+.contact .row {
+    display: flex;
+    margin-top: 2rem;
+    background-color: #222;
+}
+
+.contact .row .map {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row form {
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.contact .row form .input-group {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    background-color: var(--bg);
+    border: 1px solid #eee;
+    padding-left: 2rem;
+}
+
+.contact .row form .input-group input {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    background: none;
+    color: #fff;
+}
+
+.contact .row form .btn {
+    margin-top: 3rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background-color: var(--primary);
+    cursor: pointer;
+}
+
 
 /* media queries */
 
@@ -301,6 +352,18 @@ body {
 
     .menu p {
         font-size: 1.2rem;
+    }
+
+    .contact .row {
+        flex-wrap: wrap;
+    }
+
+    .contact .row .map {
+        height: 30rem;
+    }
+
+    .contact .row form {
+        padding-top: 0;
     }
 
 }
