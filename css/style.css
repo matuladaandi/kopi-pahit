@@ -91,6 +91,41 @@ body {
 
 }
 
+/* navbar search form */
+.navbar .search-form {
+    position: absolute;
+    top: 100%;
+    right: 7%;
+    background-color: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s;
+}
+
+.navbar .search-form.active{
+    transform: scaleY(1);
+}
+
+.navbar .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--bg);
+    padding: 1rem;
+}
+
+.navbar .search-form label {
+    cursor: pointer;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    color: var(--bg);
+}
+
+
 /* hero section */
 .hero {
     min-height: 100vh;
@@ -153,7 +188,7 @@ body {
 
 /* about section & menu,contact(a little)*/
 .about,
-contact,
+.contact,
 .menu {
     padding: 8rem 7% 1.4rem;
 }
@@ -374,6 +409,11 @@ footer .credit a {
 
     .navbar .navbar-nav a:hover::after {
         transform: scale(0.2);
+    }
+
+    .navbar .search-form {
+        width: 90%;
+        right: 2rem;
     }
 
     .about .row {
