@@ -2,6 +2,19 @@
 const navbarNav = document.querySelector(".navbar-nav");
 
 // when hamburger-menu clicked
+document.querySelector("#hamburger-menu").onclick = (e) => {
+  navbarNav.classList.toggle("active");
+  e.preventDefault();
+};
+
+// toggle class active for shopping cart
+const shoppingCard = document.querySelector(".shopping-cart");
+
+// when shopping-cart-button clicked
+document.querySelector("#shopping-cart-button").onclick = () =>
+  shoppingCard.classList.toggle("active");
+
+// when shopping-cart clicked
 document.querySelector("#hamburger-menu").onclick = () => {
   navbarNav.classList.toggle("active");
 };
@@ -18,15 +31,22 @@ document.querySelector("#search-button").onclick = (e) => {
 
 // Click outside element
 const hm = document.querySelector("#hamburger-menu"); // hm = hamburger
-const sb = document.querySelector("#search-button");
+const sb = document.querySelector("#search-button"); // search button
+const sc = document.querySelector("#shopping-cart-button"); // shopping cart
 
 document.addEventListener("click", function (e) {
-    // hamburger menu
+  // hamburger menu
   if (!hm.contains(e.target) && !navbarNav.contains(e.target)) {
     navbarNav.classList.remove("active");
   }
+
   // search button
   if (!sb.contains(e.target) && !searchForm.contains(e.target)) {
     searchForm.classList.remove("active");
+  }
+
+  // shopping-cart button
+  if (!sc.contains(e.target) && !shoppingCard.contains(e.target)) {
+    shoppingCard.classList.remove("active");
   }
 });
